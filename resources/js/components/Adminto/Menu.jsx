@@ -181,12 +181,12 @@ const Menu = ({
                                         "Reclamaciones"
                                     )}
                                 </MenuItem> */}
-                                <MenuItem
+                             {/*    <MenuItem
                                     href="/admin/services"
                                     icon="mdi mdi-shield-star"
                                 >
                                     {t("admin.sidebar.services", "Servicios")}
-                                </MenuItem>
+                                </MenuItem>*/}
                            {/*     <MenuItem
                                     href="/admin/specialities"
                                     icon="mdi mdi-tag-faces"
@@ -263,7 +263,8 @@ const Menu = ({
                                     </MenuItem>
                                 </MenuItemContainer>*/}
                                 
-                                <li className="menu-title">Landing Page</li>
+                               
+                              {/* <li className="menu-title">Landing Page</li>
                                 
                                 <MenuItem
                                     href="/admin/sliders"
@@ -285,7 +286,7 @@ const Menu = ({
                                         "admin.sidebar.testimonials",
                                         "Testimonios"
                                     )}
-                                </MenuItem>
+                                </MenuItem>*/}
                              
                               {/*  <MenuItem
                                     href="/admin/translations"
@@ -366,7 +367,8 @@ const Menu = ({
                                 >
                                     FAQs
                                 </MenuItem> */}
-                                <MenuItem
+                              
+                              {/*  <MenuItem
                                     href="/admin/socials"
                                     icon="mdi mdi-web"
                                 >
@@ -376,12 +378,12 @@ const Menu = ({
                                     )}
                                 </MenuItem>
                                 <li className="menu-title">Configuraciones</li>
-                            {/*    <MenuItem
+                           <MenuItem
                                     href="/admin/users"
                                     icon="mdi mdi-account-multiple"
                                 >
                                     {t("admin.sidebar.users", "Usuarios")}
-                                </MenuItem> */}
+                                </MenuItem> 
                                 <MenuItem
                                     href="/admin/generals"
                                     icon="mdi mdi-credit-card-settings"
@@ -402,7 +404,7 @@ const Menu = ({
                                     icon="mdi mdi-account-key"
                                 >
                                     {t("admin.sidebar.account", "Mi cuenta")}
-                                </MenuItem>
+                                </MenuItem>*/}
                             </>
                         )}
                     </ul>
