@@ -383,7 +383,7 @@ const Menu = ({
                                     icon="mdi mdi-account-multiple"
                                 >
                                     {t("admin.sidebar.users", "Usuarios")}
-                                </MenuItem> 
+                                </MenuItem> */}
                                 <MenuItem
                                     href="/admin/generals"
                                     icon="mdi mdi-credit-card-settings"
@@ -393,7 +393,7 @@ const Menu = ({
                                         "Datos Generales"
                                     )}
                                 </MenuItem>
-                                <MenuItem
+                              {/*     <MenuItem
                                     href="/admin/profile"
                                     icon="mdi mdi-account-box"
                                 >
