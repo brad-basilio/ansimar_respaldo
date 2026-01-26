@@ -2,27 +2,27 @@ import { Building2, Scissors, MapPin } from 'lucide-react';
 
 const facilities = [
   {
-    image: 'https://images.pexels.com/photos/7624226/pexels-photo-7624226.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC02539.webp',
     title: 'Talleres de Confección',
   },
   {
-    image: 'https://images.pexels.com/photos/7624209/pexels-photo-7624209.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC09706.webp',
     title: 'Aulas de Diseño',
   },
   {
-    image: 'https://images.pexels.com/photos/7362987/pexels-photo-7362987.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC09735.webp',
     title: 'Espacios Creativos',
   },
   {
-    image: 'https://images.pexels.com/photos/6765363/pexels-photo-6765363.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC09777.webp',
     title: 'Laboratorios Textiles',
   },
   {
-    image: 'https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC02747.webp',
     title: 'Áreas de Producción',
   },
   {
-    image: 'https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC04905.webp',
     title: 'Showrooms',
   },
 ];

@@ -104,6 +104,7 @@ Route::get('/generals/get-socials', [GeneralController::class, 'getSocials']);
 Route::get('/generals/get-languages', [GeneralController::class, 'getLanguages']);
 Route::get('/generals/get-benefits', [GeneralController::class, 'getBenefits']);
 Route::get('/generals/get-aboutuses', [GeneralController::class, 'getAboutuses']);
+Route::get('/generals/by-correlative/{correlative}', [GeneralController::class, 'getByCorrelative']);
 
 Route::get('/items/get-destacados', [ItemController::class, 'getDestacados']);
 Route::get('/items/get-testimonies', [TestimonyController::class, 'getTestimonies']);

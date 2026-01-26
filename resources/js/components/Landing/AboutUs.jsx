@@ -68,7 +68,7 @@ const AboutUs = () => {
               {/* Main image */}
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/6765367/pexels-photo-6765367.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  src="/assets/ansimar/DSC02539.webp"
                   alt="ANSIMAR campus"
                   className="w-full h-[500px] object-cover"
                 />

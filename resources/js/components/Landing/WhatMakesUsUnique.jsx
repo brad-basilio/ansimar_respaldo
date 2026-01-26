@@ -1,45 +1,70 @@
-import { Award, Users, Briefcase, TrendingUp, Globe, Lightbulb } from 'lucide-react';
+import { useState, useRef } from 'react';
+import { Award, Users, Briefcase, TrendingUp, Globe, Lightbulb, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const uniqueFeatures = [
   {
     icon: Award,
     title: 'Prestigio y Trayectoria',
     description: 'Más de 15 años formando profesionales en moda con un modelo educativo práctico y especializado.',
-    image: 'https://images.pexels.com/photos/7624226/pexels-photo-7624226.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC09767.webp',
   },
   {
     icon: Lightbulb,
     title: 'Formación Vanguardista',
     description: 'Aprendizaje práctico y vivencial que combina creatividad, técnica y comprensión del entorno laboral.',
-    image: 'https://images.pexels.com/photos/7362987/pexels-photo-7362987.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC02539.webp',
   },
   {
     icon: Users,
     title: 'Docentes Líderes',
     description: 'Profesionales activos en la industria que llevan el mundo real al aula.',
-    image: 'https://images.pexels.com/photos/6765363/pexels-photo-6765363.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC09681.webp',
   },
   {
     icon: Briefcase,
     title: 'Conexión con la Industria',
     description: 'Empleabilidad, emprendimiento y proyectos reales con el sector productivo.',
-    image: 'https://images.pexels.com/photos/8112179/pexels-photo-8112179.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC02539.webp',
   },
   {
     icon: TrendingUp,
     title: 'Infraestructura Moderna',
     description: 'Talleres acondicionados diseñados para facilitar el aprendizaje práctico aplicado.',
-    image: 'https://images.pexels.com/photos/7624209/pexels-photo-7624209.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC09735.webp',
   },
   {
     icon: Globe,
     title: 'Proyección Internacional',
     description: 'Convenios internacionales para convalidación y licenciatura con Universidad Gran Rosario.',
-    image: 'https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC09767.webp',
   },
 ];
 
 const WhatMakesUsUnique = () => {
+  const scrollContainerRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const checkScrollButtons = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
+
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const cardWidth = 380 + 24; // card width + gap
+      const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+      scrollContainerRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+      setTimeout(checkScrollButtons, 300);
+    }
+  };
+
   return (
     <section className="relative py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
       {/* Decorative elements */}
@@ -63,14 +88,43 @@ const WhatMakesUsUnique = () => {
 
         {/* Horizontal scrolling cards container */}
         <div className="relative">
-          <div className="overflow-x-auto pb-8 scrollbar-hide">
+          {/* Navigation buttons - outside the scroll area */}
+          <button
+            onClick={() => scroll('left')}
+            disabled={!canScrollLeft}
+            className={`absolute -left-6 lg:-left-16 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 border border-gray-200 ${
+              canScrollLeft 
+                ? 'opacity-100 hover:bg-gray-50 cursor-pointer' 
+                : 'opacity-40 cursor-default'
+            }`}
+          >
+            <ChevronLeft className="w-6 h-6 text-gray-900" />
+          </button>
+
+          <button
+            onClick={() => scroll('right')}
+            disabled={!canScrollRight}
+            className={`absolute -right-6 lg:-right-16 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 border border-gray-200 ${
+              canScrollRight 
+                ? 'opacity-100 hover:bg-gray-50 cursor-pointer' 
+                : 'opacity-40 cursor-default'
+            }`}
+          >
+            <ChevronRight className="w-6 h-6 text-gray-900" />
+          </button>
+
+          <div 
+            ref={scrollContainerRef}
+            onScroll={checkScrollButtons}
+            className="overflow-x-auto pb-8 scrollbar-hide"
+          >
             <div className="flex gap-6 w-max">
               {uniqueFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
                   <div
                     key={index}
-                    className="group relative w-[380px] bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                    className="group relative w-[340px] sm:w-[385px] bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 flex-shrink-0"
                   >
                     {/* Image with overlay */}
                     <div className="relative h-64 overflow-hidden">
@@ -108,16 +162,26 @@ const WhatMakesUsUnique = () => {
               })}
             </div>
           </div>
-
-          {/* Scroll hint */}
-          <div className="absolute right-0 top-0 bottom-8 w-24 bg-gradient-to-l from-gray-100 to-transparent pointer-events-none" />
         </div>
 
-        {/* Bottom note */}
-        <div className="mt-12 text-center">
-          <p className="text-gray-500 text-sm">
-            Desliza para ver más
-          </p>
+        {/* Dots indicator */}
+        <div className="flex justify-center gap-2 mt-6">
+          {uniqueFeatures.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                if (scrollContainerRef.current) {
+                  const cardWidth = 380 + 24;
+                  scrollContainerRef.current.scrollTo({
+                    left: cardWidth * index,
+                    behavior: 'smooth'
+                  });
+                  setTimeout(checkScrollButtons, 300);
+                }
+              }}
+              className="w-2 h-2 rounded-full bg-gray-300 hover:bg-[#8B1538] transition-colors duration-300"
+            />
+          ))}
         </div>
       </div>
 

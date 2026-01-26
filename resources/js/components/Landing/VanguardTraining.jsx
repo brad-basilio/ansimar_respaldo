@@ -2,19 +2,19 @@ import { Lightbulb, Palette, Scissors, Users } from 'lucide-react';
 
 const trainingAspects = [
   {
-    image: 'https://images.pexels.com/photos/7362987/pexels-photo-7362987.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: '/assets/ansimar/DSC02539.webp',
     caption: 'Workshops creativos',
   },
   {
-    image: 'https://images.pexels.com/photos/7624209/pexels-photo-7624209.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: '/assets/ansimar/DSC09706.webp',
     caption: 'Desarrollo de patrones',
   },
   {
-    image: 'https://images.pexels.com/photos/6765363/pexels-photo-6765363.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: '/assets/ansimar/DSC09777.webp',
     caption: 'Boards de diseño',
   },
   {
-    image: 'https://images.pexels.com/photos/8112179/pexels-photo-8112179.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: '/assets/ansimar/DSC09818.webp',
     caption: 'Proyectos reales',
   },
 ];

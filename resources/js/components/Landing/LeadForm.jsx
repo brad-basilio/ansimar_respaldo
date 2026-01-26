@@ -1,6 +1,7 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Phone, Download, CheckCircle2, ChevronDown, Monitor, Users, Check } from 'lucide-react';
 import MessagesRest from '../../actions/MessagesRest';
+import GeneralRest from '../../actions/GeneralRest';
 import Swal from 'sweetalert2';
 
 const modalities = [
@@ -122,11 +123,24 @@ const LeadForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [sending, setSending] = useState(false);
+  const [whatsappNumber, setWhatsappNumber] = useState('51999999999');
   const messagesRest = new MessagesRest();
+  const generalRest = new GeneralRest();
 
-  useState(() => {
+  useEffect(() => {
     setTimeout(() => setIsVisible(true), 300);
-  });
+    
+    // Cargar número de WhatsApp desde la base de datos
+    const loadWhatsappNumber = async () => {
+      const data = await generalRest.getByCorrelative('whatsapp_phone');
+      if (data?.description) {
+        // Limpiar el número (quitar espacios, guiones, etc.)
+        const cleanNumber = data.description.replace(/\D/g, '');
+        setWhatsappNumber(cleanNumber);
+      }
+    };
+    loadWhatsappNumber();
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -185,7 +199,7 @@ const LeadForm = () => {
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent(`Hola, soy ${formData.nombre} ${formData.apellido} y me interesa estudiar en modalidad ${formData.modalidad}`);
-    window.open(`https://wa.me/51999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
 
   const handleDownload = () => {

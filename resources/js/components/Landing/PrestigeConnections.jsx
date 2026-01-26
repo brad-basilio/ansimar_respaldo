@@ -17,9 +17,9 @@ const PrestigeConnections = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-[#8B1538]/30 to-[#D4AF37]/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src="/assets/ansimar/DSC04932.webp"
                 alt="Prestige and trajectory"
-                className="w-full h-[600px] object-cover grayscale hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                className="w-full h-[600px] object-cover  hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
             </div>

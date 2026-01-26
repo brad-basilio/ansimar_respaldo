@@ -86,6 +86,32 @@ class GeneralRest extends BasicRest {
             return [];
         }
     };
+
+    /**
+     * Obtener un General por su correlativo
+     * @param {string} correlative - El correlativo del registro a buscar
+     * @returns {Promise<object|null>} - El objeto General o null si no existe
+     */
+    getByCorrelative = async (correlative) => {
+        try {
+            const { status, result } = await Fetch(
+                `/api/${this.path}/by-correlative/${correlative}`,
+                {
+                    method: "GET",
+                }
+            );
+
+            if (!status)
+                throw new Error(
+                    result?.message ?? "Ocurrió un error al consultar"
+                );
+
+            return result?.data ?? null;
+        } catch (error) {
+            console.error("Error en getByCorrelative:", error);
+            return null;
+        }
+    };
 }
 
 export default GeneralRest;

@@ -25,7 +25,7 @@ const programData = [
 
 const ProgramInfo = () => {
   return (
-    <section className="relative py-20 lg:py-32 bg-gray-900 overflow-hidden">
+    <section id='carreras' className="relative py-20 lg:py-32 bg-gray-900 overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-[#8B1538]/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl" />

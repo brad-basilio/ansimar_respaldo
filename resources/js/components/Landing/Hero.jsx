@@ -51,12 +51,12 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-              <button className="group px-8 py-4 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2 shadow-xl hover:shadow-2xl transform hover:scale-105">
+              <a href='#carreras'  className="group px-8 py-4 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2 shadow-xl hover:shadow-2xl transform hover:scale-105">
                 Ver carreras
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
 
-              <button className="group px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center gap-2 shadow-xl">
+              <button className="hidden group px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300  items-center justify-center gap-2 shadow-xl">
                 <Download className="w-5 h-5" />
                 Descargar brochure
               </button>

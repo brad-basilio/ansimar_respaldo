@@ -2,32 +2,32 @@ import { Sparkles } from 'lucide-react';
 
 const studentWorks = [
   {
-    image: 'https://images.pexels.com/photos/6764007/pexels-photo-6764007.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC07852.webp',
     title: 'Colección Urbana',
     student: 'María García',
   },
   {
-    image: 'https://images.pexels.com/photos/5705489/pexels-photo-5705489.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC07703.webp',
     title: 'Alta Costura',
     student: 'Ana Rodríguez',
   },
   {
-    image: 'https://images.pexels.com/photos/6764040/pexels-photo-6764040.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC04932.webp',
     title: 'Moda Sostenible',
     student: 'Carlos López',
   },
   {
-    image: 'https://images.pexels.com/photos/5709665/pexels-photo-5709665.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC07769.webp',
     title: 'Avant Garde',
     student: 'Laura Méndez',
   },
   {
-    image: 'https://images.pexels.com/photos/6046229/pexels-photo-6046229.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC07677.webp',
     title: 'Street Style',
     student: 'Diego Torres',
   },
   {
-    image: 'https://images.pexels.com/photos/5705478/pexels-photo-5705478.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/assets/ansimar/DSC04905.webp',
     title: 'Minimalismo',
     student: 'Sofía Herrera',
   },

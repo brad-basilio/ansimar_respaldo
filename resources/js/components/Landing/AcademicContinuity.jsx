@@ -16,7 +16,7 @@ const AcademicContinuity = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/30 to-[#8B1538]/30 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/5905857/pexels-photo-5905857.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src="/assets/ansimar/DSC02539.webp"
                 alt="Academic continuity"
                 className="w-full h-[600px] object-cover transform group-hover:scale-105 transition-transform duration-700"
               />

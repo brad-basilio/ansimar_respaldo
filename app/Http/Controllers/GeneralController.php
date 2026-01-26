@@ -121,4 +121,33 @@ class GeneralController extends BasicController
             );
         }
     }
+
+    /**
+     * Obtener un General por su correlativo
+     */
+    public function getByCorrelative(Request $request, string $correlative): HttpResponse|ResponseFactory
+    {
+        $response = new Response();
+        try {
+            $general = General::where('correlative', $correlative)
+                ->where('status', true)
+                ->first();
+
+            if (!$general) {
+                throw new Exception("No se encontró el registro con correlativo: {$correlative}");
+            }
+
+            $response->data = $general;
+            $response->status = 200;
+            $response->message = 'Operacion correcta';
+        } catch (\Throwable $th) {
+            $response->status = 400;
+            $response->message = $th->getMessage();
+        } finally {
+            return response(
+                $response->toArray(),
+                $response->status
+            );
+        }
+    }
 }

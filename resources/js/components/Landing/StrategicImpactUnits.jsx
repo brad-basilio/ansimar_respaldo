@@ -2,17 +2,17 @@ import { Globe, Heart, Sparkles } from 'lucide-react';
 
 const impactAreas = [
   {
-    image: 'https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: '/assets/ansimar/DSC09681.webp',
     title: 'Inspiración Cultural',
     description: 'Conectamos la moda con nuestras raíces y tradiciones',
   },
   {
-    image: 'https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: '/assets/ansimar/DSC02747.webp',
     title: 'Referencias Globales',
     description: 'Estudiamos las principales pasarelas y tendencias mundiales',
   },
   {
-    image: 'https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: '/assets/ansimar/DSC07677.webp',
     title: 'Diseño Sostenible',
     description: 'Formamos profesionales conscientes del impacto ambiental',
   },

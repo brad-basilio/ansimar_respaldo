@@ -34,7 +34,7 @@ const WhyStudyFashion = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-[#8B1538]/20 to-[#D4AF37]/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  src="/assets/ansimar/DSC09767.webp"
                   alt="Fashion runway"
                   className="w-full h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
@@ -59,7 +59,7 @@ const WhyStudyFashion = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="group relative overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/assets/ansimar/DSC09818.webp"
                 alt="Fashion show"
                 className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
@@ -71,7 +71,7 @@ const WhyStudyFashion = () => {
 
             <div className="group relative overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/assets/ansimar/DSC02747.webp"
                 alt="Runway fashion"
                 className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
@@ -83,7 +83,7 @@ const WhyStudyFashion = () => {
 
             <div className="group relative overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="https://images.pexels.com/photos/1342609/pexels-photo-1342609.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/assets/ansimar/DSC04932.webp"
                 alt="Runway moments"
                 className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
