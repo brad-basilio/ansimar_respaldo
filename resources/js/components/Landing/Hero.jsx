@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="absolute top-6 left-4 sm:left-6 lg:left-8 z-30">
           <a href="/">
             <img
-              src="/assets/img/logo.png"
+              src="/assets/img/logo-white.png"
               alt="ANSIMAR Logo"
               className="h-[80px] w-auto md:h-[100px] object-cover object-top"
             />
