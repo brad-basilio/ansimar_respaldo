@@ -97,8 +97,39 @@ const Messages = () => {
                         caption: "Correo",
                     },
                     {
+                        dataField: "phone",
+                        caption: "Teléfono",
+                    },
+                    {
+                        dataField: "modality",
+                        caption: "Modalidad",
+                        cellTemplate: (container, { data }) => {
+                            if (data.modality) {
+                                const isVirtual = data.modality.toLowerCase() === 'virtual';
+                                ReactAppend(
+                                    container,
+                                    <span className={`badge ${isVirtual ? 'bg-info' : 'bg-primary'} rounded-pill`}>
+                                        {data.modality}
+                                    </span>
+                                );
+                            } else {
+                                ReactAppend(
+                                    container,
+                                    <i className="text-muted">- Sin especificar -</i>
+                                );
+                            }
+                        },
+                    },
+                    {
+                        dataField: "age",
+                        caption: "Edad",
+                        width: 80,
+                        alignment: "center",
+                    },
+                    {
                         dataField: "service.title",
                         caption: "Servicio",
+                        visible: false,
                         cellTemplate: (container, { data }) => {
                             ReactAppend(
                                 container,
@@ -170,35 +201,116 @@ const Messages = () => {
                     },
                 ]}
             />
-            <Modal modalRef={modalRef} title="Mensaje" hideFooter>
-                <p>
-                    <b>Nombre</b>:
-                    <span className="ms-1">{dataLoaded?.name}</span>
-                </p>
-                <p>
-                    <b>Correo</b>:
-                    <span className="ms-1">
-                        {dataLoaded?.email || (
-                            <i className="text-muted">- Sin correo -</i>
-                        )}
-                    </span>
-                </p>
-                <p>
-                    <b>Telefono</b>:
-                    <span className="ms-1">{dataLoaded?.subject}</span>
-                </p>
-                <p>
-                    <b>Servicio</b>:
-                    <span className="ms-1">
-                        {dataLoaded?.service?.title || (
-                            <i className="text-muted">- Consulta General -</i>
-                        )}
-                    </span>
-                </p>
-                <p>
-                    <b>Mensaje</b>:
-                    <span className="ms-1">{dataLoaded?.description}</span>
-                </p>
+            <Modal modalRef={modalRef} title="Detalle del Mensaje" hideFooter size="md">
+                <div className="row">
+                    <div className="col-12 mb-3">
+                        <div className="card bg-light border-0">
+                            <div className="card-body">
+                                <div className="d-flex align-items-center">
+                                    <div className="avatar-md bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3">
+                                        <i className="fas fa-user fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h5 className="mb-0">{dataLoaded?.name}</h5>
+                                        <small className="text-muted">
+                                            {dataLoaded?.email || <i>Sin correo</i>}
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-md-6 mb-3">
+                        <div className="border rounded p-3 h-100">
+                            <small className="text-muted d-block mb-1">
+                                <i className="fas fa-phone me-1"></i> Teléfono
+                            </small>
+                            <span className="fw-semibold">
+                                {dataLoaded?.phone || <i className="text-muted">No especificado</i>}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className="col-md-6 mb-3">
+                        <div className="border rounded p-3 h-100">
+                            <small className="text-muted d-block mb-1">
+                                <i className="fas fa-birthday-cake me-1"></i> Edad
+                            </small>
+                            <span className="fw-semibold">
+                                {dataLoaded?.age ? `${dataLoaded.age} años` : <i className="text-muted">No especificado</i>}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className="col-md-6 mb-3">
+                        <div className="border rounded p-3 h-100">
+                            <small className="text-muted d-block mb-1">
+                                <i className="fas fa-laptop me-1"></i> Modalidad
+                            </small>
+                            {dataLoaded?.modality ? (
+                                <span className={`badge ${dataLoaded.modality.toLowerCase() === 'virtual' ? 'bg-info' : 'bg-primary'}`}>
+                                    {dataLoaded.modality}
+                                </span>
+                            ) : (
+                                <i className="text-muted">No especificado</i>
+                            )}
+                        </div>
+                    </div>
+
+                    <div className="col-md-6 mb-3">
+                        <div className="border rounded p-3 h-100">
+                            <small className="text-muted d-block mb-1">
+                                <i className="fas fa-briefcase me-1"></i> Servicio
+                            </small>
+                            <span className="fw-semibold">
+                                {dataLoaded?.service?.title || <i className="text-muted">Consulta General</i>}
+                            </span>
+                        </div>
+                    </div>
+
+                    {dataLoaded?.subject && (
+                        <div className="col-12 mb-3">
+                            <div className="border rounded p-3">
+                                <small className="text-muted d-block mb-1">
+                                    <i className="fas fa-tag me-1"></i> Asunto
+                                </small>
+                                <span className="fw-semibold">{dataLoaded?.subject}</span>
+                            </div>
+                        </div>
+                    )}
+
+                    {dataLoaded?.description && (
+                        <div className="col-12 mb-3">
+                            <div className="border rounded p-3">
+                                <small className="text-muted d-block mb-1">
+                                    <i className="fas fa-comment me-1"></i> Mensaje
+                                </small>
+                                <p className="mb-0 mt-2">{dataLoaded?.description}</p>
+                            </div>
+                        </div>
+                    )}
+
+                    <div className="col-12">
+                        <hr />
+                        <div className="d-flex justify-content-between align-items-center">
+                            <small className="text-muted">
+                                <i className="fas fa-calendar me-1"></i>
+                                {dataLoaded?.created_at ? new Date(dataLoaded.created_at).toLocaleString('es-PE') : ''}
+                            </small>
+                            {dataLoaded?.phone && (
+                                <a 
+                                    href={`https://wa.me/51${dataLoaded.phone.replace(/\D/g, '')}`} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="btn btn-success btn-sm"
+                                >
+                                    <i className="fab fa-whatsapp me-1"></i> Contactar por WhatsApp
+                                </a>
+                            )}
+                        </div>
+                    </div>
+                </div>
             </Modal>
         </>
     );

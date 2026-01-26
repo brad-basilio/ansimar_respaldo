@@ -158,8 +158,11 @@ const LeadForm = () => {
     const request = {
       name: formData.nombre + " " + formData.apellido,
       email: formData.email,
-      subject: `Postulación - ${formData.modalidad} - Edad: ${formData.edad}`,
-      description: `Teléfono: ${formData.telefono}\nModalidad: ${formData.modalidad}\nEdad: ${formData.edad}`,
+      phone: formData.telefono,
+      age: formData.edad,
+      modality: formData.modalidad,
+      subject: `Postulación Landing - ${formData.modalidad}`,
+      description: `Nuevo postulante desde el landing de moda.`,
     };
 
     try {

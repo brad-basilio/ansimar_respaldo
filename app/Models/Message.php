@@ -16,11 +16,20 @@ class Message extends Model
     protected $fillable = [
         'name',
         'email',
+        'phone',
+        'age',
+        'modality',
         'subject',
         'description',
         'service_id',
         'seen',
         'status',
+    ];
+
+    protected $casts = [
+        'age' => 'integer',
+        'seen' => 'boolean',
+        'status' => 'boolean',
     ];
 
     // Relación con el servicio
