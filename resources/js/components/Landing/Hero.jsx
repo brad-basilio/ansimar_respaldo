@@ -19,6 +19,7 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
+        
       {/* Full-screen slider background */}
       <ImageSlider />
 
@@ -27,6 +28,18 @@ const Hero = () => {
 
       {/* Content container */}
       <div className="relative z-20 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Logo - alineado con el contenido */}
+        <div className="absolute top-6 left-4 sm:left-6 lg:left-8 z-30">
+          <a href="/">
+            <img
+              src="/assets/img/logo.png"
+              alt="ANSIMAR Logo"
+              className="h-[80px] w-auto md:h-[100px] object-cover object-top"
+            />
+          </a>
+        </div>
+
         <div className="h-full flex flex-col lg:flex-row items-center justify-between gap-8 py-12 lg:py-20">
 
           {/* Left side - Hero text with parallax */}
