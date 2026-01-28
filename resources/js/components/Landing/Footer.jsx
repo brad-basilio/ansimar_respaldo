@@ -196,8 +196,14 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <span className="text-gray-400">
-                  Lun - Vie: 8:00 AM - 9:00 PM<br />
-                  Sáb: 9:00 AM - 5:00 PM
+                   <strong>Horario Presencial</strong><br />
+                  Lun - Vie: 9:00 AM - 1:30 PM<br />
+                   Lun - Vie: 6:00 PM - 10:00 PM<br />
+<br />
+
+                     <span  className='mt-4'>  <strong>Horario Virtual</strong><br /> </span>
+                    Lun - Vie: 7:00 AM - 1:00 PM<br />
+         
                 </span>
               </li>
             </ul>

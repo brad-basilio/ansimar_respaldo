@@ -85,8 +85,8 @@
       "resources/js/Admin/FileViewer.jsx"
     ]
   },
-  "_Footer-Csxf6R3A.js": {
-    "file": "assets/Footer-Csxf6R3A.js",
+  "_Footer-DUjYN-hV.js": {
+    "file": "assets/Footer-DUjYN-hV.js",
     "name": "Footer",
     "imports": [
       "resources/js/Admin/FileViewer.jsx",
@@ -2530,7 +2530,7 @@
     ]
   },
   "resources/js/Home.jsx": {
-    "file": "assets/Home-DZUkHtHa.js",
+    "file": "assets/Home-DcgieTZV.js",
     "name": "Home",
     "src": "resources/js/Home.jsx",
     "isEntry": true,
@@ -2554,7 +2554,7 @@
       "_x-DwxZ1MqR.js",
       "_star-DW9gesXi.js",
       "_chevron-left-BEeJG_n0.js",
-      "_Footer-Csxf6R3A.js",
+      "_Footer-DUjYN-hV.js",
       "_index-CbrplguO.js",
       "resources/js/components/Blog/Filter.jsx",
       "_axios-B4uVmeYG.js",
@@ -2862,7 +2862,7 @@
     ]
   },
   "resources/js/PrivacyPolicy.jsx": {
-    "file": "assets/PrivacyPolicy-BbFL96FT.js",
+    "file": "assets/PrivacyPolicy-BvVhj7sT.js",
     "name": "PrivacyPolicy",
     "src": "resources/js/PrivacyPolicy.jsx",
     "isEntry": true,
@@ -2873,7 +2873,7 @@
       "_CreateReactScript-BEktg6JA.js",
       "resources/js/Utils/ReactAppend.jsx",
       "resources/js/components/Tailwind/DetailProduct/Detail.jsx",
-      "_Footer-Csxf6R3A.js",
+      "_Footer-DUjYN-hV.js",
       "_shield-Dc5Z14ef.js",
       "resources/js/components/Blog/Filter.jsx",
       "_axios-B4uVmeYG.js",
@@ -3075,7 +3075,7 @@
     ]
   },
   "resources/js/TermsConditions.jsx": {
-    "file": "assets/TermsConditions-DKVrTKj1.js",
+    "file": "assets/TermsConditions-BAtiE6nu.js",
     "name": "TermsConditions",
     "src": "resources/js/TermsConditions.jsx",
     "isEntry": true,
@@ -3086,7 +3086,7 @@
       "_CreateReactScript-BEktg6JA.js",
       "resources/js/Utils/ReactAppend.jsx",
       "resources/js/components/Tailwind/DetailProduct/Detail.jsx",
-      "_Footer-Csxf6R3A.js",
+      "_Footer-DUjYN-hV.js",
       "_file-text-Ad8FQ3Sk.js",
       "resources/js/components/Blog/Filter.jsx",
       "_axios-B4uVmeYG.js",
@@ -3528,7 +3528,7 @@
     ]
   },
   "resources/js/components/Adminto/form/CheckboxFormGroup.jsx": {
-    "file": "assets/CheckboxFormGroup-BM6_LCjb.js",
+    "file": "assets/CheckboxFormGroup-COKCz9DG.js",
     "name": "CheckboxFormGroup",
     "src": "resources/js/components/Adminto/form/CheckboxFormGroup.jsx",
     "isEntry": true,
@@ -3590,7 +3590,7 @@
     ]
   },
   "resources/js/components/Adminto/form/SelectFormGroup.jsx": {
-    "file": "assets/SelectFormGroup-COKCz9DG.js",
+    "file": "assets/SelectFormGroup-BM6_LCjb.js",
     "name": "SelectFormGroup",
     "src": "resources/js/components/Adminto/form/SelectFormGroup.jsx",
     "isEntry": true,
@@ -4730,10 +4730,10 @@
     ]
   },
   "resources/js/components/Test/Email.jsx": {
-    "file": "assets/Email-xZLZruGf.js",
+    "file": "assets/Email-DtB6xgHv.js",
     "name": "Email",
     "src": "resources/js/components/Test/Email.jsx",
-    "isEntry": true,
+    "isDynamicEntry": true,
     "imports": [
       "resources/js/Admin/FileViewer.jsx",
       "resources/js/components/TrackingPixels.jsx",
@@ -4764,10 +4764,10 @@
     ]
   },
   "resources/js/components/Test/HairType.jsx": {
-    "file": "assets/HairType-W2tboi8x.js",
+    "file": "assets/HairType-DWnGOmiA.js",
     "name": "HairType",
     "src": "resources/js/components/Test/HairType.jsx",
-    "isDynamicEntry": true,
+    "isEntry": true,
     "imports": [
       "resources/js/Admin/FileViewer.jsx",
       "resources/js/components/TrackingPixels.jsx",
@@ -4904,7 +4904,7 @@
     "isEntry": true
   },
   "resources/js/components/form/CheckboxFormGroup.jsx": {
-    "file": "assets/CheckboxFormGroup-COKCz9DG.js",
+    "file": "assets/CheckboxFormGroup-BM6_LCjb.js",
     "name": "CheckboxFormGroup",
     "src": "resources/js/components/form/CheckboxFormGroup.jsx",
     "isEntry": true,
@@ -4956,7 +4956,7 @@
     ]
   },
   "resources/js/components/form/SelectFormGroup.jsx": {
-    "file": "assets/SelectFormGroup-BM6_LCjb.js",
+    "file": "assets/SelectFormGroup-COKCz9DG.js",
     "name": "SelectFormGroup",
     "src": "resources/js/components/form/SelectFormGroup.jsx",
     "isEntry": true,
