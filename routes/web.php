@@ -67,6 +67,8 @@ use App\Http\Controllers\SupplyController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\TestResultController;
 use App\Http\Controllers\ThankController;
+use App\Http\Controllers\PrivacyPolicyController;
+use App\Http\Controllers\TermsConditionsController;
 use Illuminate\Http\Request;
 
 /*
@@ -116,6 +118,8 @@ Route::get('/formula/{formula}', [FormulaController::class, 'reactView'])->name(
 Route::get('/thanks', [ThankController::class, 'reactView'])->name('Thanks.jsx');
 Route::get('/loginvua', [LoginVuaController::class, 'reactView'])->name('LoginVua.jsx');
 Route::get('/popup', [PopupController::class, 'reactView'])->name('Popup.jsx');
+Route::get('/privacy-policy', [PrivacyPolicyController::class, 'reactView'])->name('PrivacyPolicy.jsx');
+Route::get('/terms-conditions', [TermsConditionsController::class, 'reactView'])->name('TermsConditions.jsx');
 
 Route::get('/login', [AuthController::class, 'loginView'])->name('Login.jsx');
 Route::get('/register', [AuthController::class, 'registerView'])->name('Register.jsx');

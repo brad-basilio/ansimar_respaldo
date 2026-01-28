@@ -184,7 +184,8 @@ const LeadForm = () => {
       setSending(false);
 
       if (result) {
-        setIsSubmitted(true);
+        // Redirigir a la página de agradecimiento
+        window.location.href = '/thanks';
       }
     } catch (error) {
       setSending(false);

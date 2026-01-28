@@ -208,10 +208,10 @@ const Footer = () => {
               © {new Date().getFullYear()} ANSIMAR Instituto de Moda. Todos los derechos reservados.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-gray-500 hover:text-[#D4AF37] transition-colors">
+              <a href="/privacy-policy" className="text-gray-500 hover:text-[#D4AF37] transition-colors">
                 Política de Privacidad
               </a>
-              <a href="#" className="text-gray-500 hover:text-[#D4AF37] transition-colors">
+              <a href="/terms-conditions" className="text-gray-500 hover:text-[#D4AF37] transition-colors">
                 Términos de Uso
               </a>
             </div>
