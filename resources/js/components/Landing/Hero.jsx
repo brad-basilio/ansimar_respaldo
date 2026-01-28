@@ -18,7 +18,7 @@ const Hero = () => {
   const parallaxOffset = scrollY * 0.5;
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-auto lg:h-screen overflow-hidden">
         
       {/* Full-screen slider background */}
       <ImageSlider />
@@ -30,7 +30,7 @@ const Hero = () => {
       <div className="relative z-20 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Logo - alineado con el contenido */}
-        <div className="absolute top-6 left-4 sm:left-6 lg:left-8 z-30">
+        <div className="mt-10 lg:mt-0 lg:absolute top-6 left-4 sm:left-6 lg:left-8 z-30">
           <a href="/">
             <img
               src="/assets/img/logo-white.png"

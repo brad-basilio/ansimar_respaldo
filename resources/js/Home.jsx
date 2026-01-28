@@ -36,11 +36,11 @@ const Home = () => {
       {/* Program Information */}
       <ProgramInfo />
       
-      {/* Why Study Fashion */}
-      <WhyStudyFashion />
+      {/* Why Study Fashion   <WhyStudyFashion />*/}
+     
       
-      {/* What Makes Us Unique - Horizontal Scroll */}
-      <WhatMakesUsUnique />
+      {/* What Makes Us Unique - Horizontal Scroll      <WhatMakesUsUnique />*/}
+  
       
       {/* Prestige Connections */}
       <PrestigeConnections />
@@ -51,11 +51,11 @@ const Home = () => {
       {/* Infrastructure Innovation */}
       <InfrastructureInnovation />
       
-      {/* International Conventions */}
-      <InternationalConventions />
+      {/* International Conventions      <InternationalConventions />*/}
+ 
       
-      {/* Faculty Leaders */}
-      <FacultyLeaders />
+      {/* Faculty Leaders       <FacultyLeaders /> */}
+
       
       {/* Curriculum Section */}
       <CurriculumSection />
@@ -63,11 +63,11 @@ const Home = () => {
       {/* Career Field */}
       <CareerField />
       
-      {/* Strategic Impact Units */}
-      <StrategicImpactUnits />
+      {/* Strategic Impact Units        <StrategicImpactUnits />*/}
+
       
-      {/* Academic Continuity */}
-      <AcademicContinuity />
+      {/* Academic Continuity <AcademicContinuity /> */}
+      
       
       {/* Student Work Gallery */}
       <StudentWork />
@@ -75,11 +75,11 @@ const Home = () => {
       {/* From Class to Runway */}
       <FromClassToRunway />
       
-      {/* About Us */}
-      <AboutUs />
+      {/* About Us    <AboutUs />*/}
+    
       
-      {/* Why Study With Us */}
-      <WhyStudyWithUs />
+      {/* Why Study With Us   <WhyStudyWithUs />*/}
+    
       
       {/* Academic Structure */}
       <AcademicStructure />
