@@ -36,7 +36,7 @@ const studentWorks = [
 
 const StudentWork = () => {
   return (
-    <section className="relative py-20 lg:py-32 bg-white overflow-hidden">
+    <section id="galeria" className="relative py-20 lg:py-32 bg-white overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#8B1538]/5 rounded-full blur-3xl"></div>

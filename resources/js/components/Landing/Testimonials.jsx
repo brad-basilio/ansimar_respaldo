@@ -66,7 +66,7 @@ const Testimonials = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="relative py-20 lg:py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-[#8B1538]/80 overflow-hidden">
+    <section id='testimonios' className="relative py-20 lg:py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-[#8B1538]/80 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-10 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl"></div>

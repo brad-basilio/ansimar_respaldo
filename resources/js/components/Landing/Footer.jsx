@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin, Youtube, Send, ChevronRight } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin, Youtube, Send, ChevronRight, Globe } from 'lucide-react';
 import Swal from 'sweetalert2';
 import SubscriptionsRest from '../../actions/SubscriptionsRest';
 
 const quickLinks = [
-  { name: 'Inicio', href: '#' },
-  { name: 'Programas', href: '#' },
-  { name: 'Nosotros', href: '#' },
-  { name: 'Galería', href: '#' },
-  { name: 'Testimonios', href: '#' },
-  { name: 'Contacto', href: '#' },
+  { name: 'Postular Ahora', href: '#postular' },
+  { name: 'Programas', href: '#carreras' },
+  { name: 'Nosotros', href: '#nosotros' },
+  { name: 'Galería', href: '#galeria' },
+  { name: 'Testimonios', href: '#testimonios' },
+
 ];
 
 const programs = [
@@ -21,10 +21,10 @@ const programs = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Youtube, href: '#', label: 'YouTube' },
+  { icon: Facebook, href: 'https://www.facebook.com/ansimarperu/', label: 'Facebook' },
+  { icon: Instagram, href: 'https://www.instagram.com/ansimar_peru/?hl=es-la', label: 'Instagram' },
+  { icon: Globe, href: 'https://www.ansimar.edu.pe', label: 'Web' },
+
 ];
 
 const Footer = () => {
@@ -122,8 +122,13 @@ const Footer = () => {
           {/* Column 1 - About */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <h4 className="text-2xl font-bold text-white">ANSIMAR</h4>
-              <p className="text-[#D4AF37] text-sm font-semibold">Instituto de Moda</p>
+               <a href="/">
+            <img
+              src="/assets/img/logo-white.png"
+              alt="ANSIMAR Logo"
+              className="h-[80px] w-auto md:h-[100px] object-cover object-top"
+            />
+          </a>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Más de 15 años formando a los mejores profesionales de la moda en el Perú. Tu sueño, nuestra pasión.
@@ -147,7 +152,12 @@ const Footer = () => {
 
           {/* Column 2 - Quick Links */}
           <div>
-            <h5 className="text-white font-bold text-lg mb-6">Enlaces Rápidos</h5>
+          
+          </div>
+
+          {/* Column 3 - Programs */}
+          <div>
+           <h5 className="text-white font-bold text-lg mb-6">Enlaces Rápidos</h5>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -155,26 +165,8 @@ const Footer = () => {
                     href={link.href}
                     className="text-gray-400 hover:text-[#D4AF37] transition-colors duration-300 flex items-center gap-2 group"
                   >
-                    <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ChevronRight className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
                     {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 3 - Programs */}
-          <div>
-            <h5 className="text-white font-bold text-lg mb-6">Programas</h5>
-            <ul className="space-y-3">
-              {programs.map((program, index) => (
-                <li key={index}>
-                  <a
-                    href={program.href}
-                    className="text-gray-400 hover:text-[#D4AF37] transition-colors duration-300 flex items-center gap-2 group"
-                  >
-                    <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {program.name}
                   </a>
                 </li>
               ))}
@@ -187,18 +179,18 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-1" />
-                <span className="text-gray-400">Av. La Marina 1234, San Miguel, Lima - Perú</span>
+                <span className="text-gray-400">Pasaje Moquegua 203 Urbanizacion San Felipe - Distrito De Comas</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[#D4AF37] flex-shrink-0" />
-                <a href="tel:+5112345678" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
-                  (01) 234-5678
+                <a href="tel:019060680" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
+                  019060680
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#D4AF37] flex-shrink-0" />
-                <a href="mailto:info@ansimar.edu.pe" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
-                  info@ansimar.edu.pe
+                <a href="mailto:informes@ansimar.edu.pe" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
+                 informes@ansimar.edu.pe
                 </a>
               </li>
               <li className="flex items-start gap-3">
