@@ -49,6 +49,7 @@
     <link href="/lte/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
     @vite('resources/js/' . $route)
+    @vite('resources/css/sidebar-override.css')
     @inertiaHead
 
     <style>

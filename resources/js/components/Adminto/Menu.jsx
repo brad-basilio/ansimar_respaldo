@@ -59,6 +59,7 @@ const Menu = ({
                             className="user-name dropdown-toggle h5 mt-2 mb-1 d-block"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
+                            style={{ color: "#343a40 !important" }}
                         >
                             {session.name.split(" ")[0]}{" "}
                             {session.lastname.split(" ")[0]}
@@ -100,7 +101,7 @@ const Menu = ({
                     </div>
 
                     {/* <Tippy content={mainRole.description} arrow={true}> */}
-                    <p className="text-muted left-user-info">{mainRole.name}</p>
+                    <p className="text-muted left-user-info" style={{ color: "#6c757d !important" }}>{mainRole.name}</p>
                     {/* </Tippy> */}
 
                     <ul className="list-inline">
@@ -109,6 +110,7 @@ const Menu = ({
                                 <a
                                     href="#"
                                     className="text-muted left-user-info right-bar-toggle dropdown notification-list"
+                                    style={{ color: "#6c757d !important" }}
                                 >
                                     <i className="mdi mdi-cog"></i>
                                 </a>
@@ -130,8 +132,8 @@ const Menu = ({
                 </div>
 
                 <div id="sidebar-menu" className="show">
-                    <ul id="side-menu">
-                        <li className="menu-title">Navigation Panel</li>
+                    <ul id="side-menu" style={{ color: "#6e768e" }}>
+                        <li className="menu-title" style={{ color: "#6c757d !important" }}>Navigation Panel</li>
                         {hasRole("Admin") && (
                             <>
                               

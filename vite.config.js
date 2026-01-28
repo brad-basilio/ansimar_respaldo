@@ -16,6 +16,7 @@ export default defineConfig({
                 ...glob.sync("resources/js/**/*.jsx"),
                 "resources/css/app.css",
                 "resources/css/swiper-custom.css",
+                "resources/css/sidebar-override.css",
             ],
             refresh: true,
         }),
