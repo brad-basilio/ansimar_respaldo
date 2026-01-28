@@ -160,6 +160,12 @@ const Menu = ({
 
                                     {t("admin.sidebar.messages", "Mensajes")}
                                 </MenuItem>
+                                 <MenuItem
+                                    href="/admin/subscriptions"
+                                    icon="mdi mdi-email-multiple"
+                                >
+                                    Subscripciones
+                                </MenuItem>
                            {/*     <MenuItem
                                     href="/admin/appointments"
                                     icon="mdi mdi-android-messages"
@@ -305,12 +311,7 @@ const Menu = ({
                                 >
                                     {t("admin.sidebar.pages", "Páginas")}
                                 </MenuItem> */}
-                                {/*    <MenuItem
-                                    href="/admin/subscriptions"
-                                    icon="mdi mdi-email-multiple"
-                                >
-                                    Subscripciones
-                                </MenuItem>
+                                {/*   
                                 
                                 
                                 <MenuItem

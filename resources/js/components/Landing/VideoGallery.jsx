@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Play, X, Film, ChevronLeft, ChevronRight } from 'lucide-react';
+import { handleSmoothScroll } from '../../Utils/smoothScroll';
 
 const videos = [
   {
@@ -89,7 +90,7 @@ const VideoGallery = () => {
   }, [isModalOpen]);
 
   return (
-    <section className="relative py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
+    <section id='experiencias' className="relative py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#8B1538]/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl" />
@@ -182,10 +183,9 @@ const VideoGallery = () => {
 
         {/* See more button */}
         <div className="text-center mt-12">
-          <button className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-[#8B1538] to-[#B8174C] text-white rounded-full font-bold text-lg hover:from-[#6B0F28] hover:to-[#8B1538] transition-all duration-300 shadow-2xl hover:shadow-[#8B1538]/30 transform hover:scale-105">
+          <a href="#postular" onClick={handleSmoothScroll}  className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-[#8B1538] to-[#B8174C] text-white rounded-full font-bold text-lg hover:from-[#6B0F28] hover:to-[#8B1538] transition-all duration-300 shadow-2xl hover:shadow-[#8B1538]/30 transform hover:scale-105">
             <Film className="w-6 h-6" />
-            Ver más videos
-          </button>
+Postula Ahora          </a>
         </div>
       </div>
 

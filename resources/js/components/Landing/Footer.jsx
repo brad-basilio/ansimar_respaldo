@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin, Youtube, Send, ChevronRight } from 'lucide-react';
 import Swal from 'sweetalert2';
+import SubscriptionsRest from '../../actions/SubscriptionsRest';
 
 const quickLinks = [
   { name: 'Inicio', href: '#' },
@@ -29,6 +30,7 @@ const socialLinks = [
 const Footer = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const subscriptionsRest = new SubscriptionsRest();
 
   const handleNewsletterSubmit = async (e) => {
     e.preventDefault();
@@ -36,18 +38,29 @@ const Footer = () => {
 
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      const result = await subscriptionsRest.save({ email });
 
-    Swal.fire({
-      icon: 'success',
-      title: '¡Suscrito!',
-      text: 'Te has suscrito exitosamente a nuestro newsletter.',
-      confirmButtonColor: '#8B1538',
-    });
-
-    setEmail('');
-    setIsSubmitting(false);
+      if (result) {
+        Swal.fire({
+          icon: 'success',
+          title: '¡Suscrito!',
+          text: 'Te has suscrito exitosamente a nuestro newsletter.',
+          confirmButtonColor: '#8B1538',
+        });
+        setEmail('');
+      }
+    } catch (error) {
+      console.error('Error al suscribirse:', error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Hubo un problema al procesar tu suscripción. Por favor, inténtalo de nuevo.',
+        confirmButtonColor: '#8B1538',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

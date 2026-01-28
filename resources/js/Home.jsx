@@ -81,8 +81,8 @@ const Home = () => {
       {/* Why Study With Us   <WhyStudyWithUs />*/}
     
       
-      {/* Academic Structure */}
-      <AcademicStructure />
+      {/* Academic Structure        <AcademicStructure />*/}
+
       
       {/* Video Gallery */}
       <VideoGallery />

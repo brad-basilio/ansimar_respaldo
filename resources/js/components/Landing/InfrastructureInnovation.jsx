@@ -1,4 +1,5 @@
 import { Building2, Scissors, MapPin } from 'lucide-react';
+import { handleSmoothScroll } from '../../Utils/smoothScroll';
 
 const facilities = [
   {
@@ -106,9 +107,13 @@ const InfrastructureInnovation = () => {
                 Cada ambiente ha sido pensado para potenciar tu aprendizaje y creatividad
               </p>
             </div>
-            <button className="px-8 py-4 bg-white text-gray-900 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
-              Conoce nuestras instalaciones
-            </button>
+            <a 
+              href="#postular" 
+              onClick={handleSmoothScroll}
+              className="px-8 py-4 bg-white text-gray-900 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
+            >
+              Postular ahora
+            </a>
           </div>
         </div>
       </div>

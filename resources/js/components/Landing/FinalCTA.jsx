@@ -1,4 +1,5 @@
 import { ArrowRight, Sparkles, Phone, MessageCircle } from 'lucide-react';
+import { handleSmoothScroll } from '../../Utils/smoothScroll';
 
 const FinalCTA = () => {
   return (
@@ -39,11 +40,11 @@ const FinalCTA = () => {
 
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <button className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-[#8B1538] rounded-full font-bold text-lg transition-all duration-300 shadow-2xl hover:shadow-white/30 transform hover:scale-105">
+          <a href="#postular" onClick={handleSmoothScroll}  className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-[#8B1538] rounded-full font-bold text-lg transition-all duration-300 shadow-2xl hover:shadow-white/30 transform hover:scale-105">
             <Sparkles className="w-6 h-6" />
             Inscríbete ahora
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
           <a
             href="https://wa.me/51999999999"
             target="_blank"

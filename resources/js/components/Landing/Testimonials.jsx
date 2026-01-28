@@ -172,21 +172,18 @@ const Testimonials = () => {
         </div>
 
         {/* Stats row */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6">
+        
           <div className="text-center">
-            <p className="text-4xl lg:text-5xl font-bold text-[#D4AF37]">2,500+</p>
-            <p className="text-gray-400 mt-2">Egresados exitosos</p>
-          </div>
-          <div className="text-center">
-            <p className="text-4xl lg:text-5xl font-bold text-white">95%</p>
+            <p className="text-4xl lg:text-7xl font-bold text-white">95%</p>
             <p className="text-gray-400 mt-2">Satisfacción</p>
           </div>
           <div className="text-center">
-            <p className="text-4xl lg:text-5xl font-bold text-[#D4AF37]">4.9</p>
+            <p className="text-4xl lg:text-7xl font-bold text-[#D4AF37]">4.9</p>
             <p className="text-gray-400 mt-2">Calificación promedio</p>
           </div>
           <div className="text-center">
-            <p className="text-4xl lg:text-5xl font-bold text-white">100%</p>
+            <p className="text-4xl lg:text-7xl font-bold text-white">100%</p>
             <p className="text-gray-400 mt-2">Recomendación</p>
           </div>
         </div>

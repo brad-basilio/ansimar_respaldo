@@ -11,8 +11,12 @@ use App\Mail\RawHtmlMail;
 class SubscriptionNotification extends Notification implements ShouldQueue
 {
     use Queueable;
-    public function __construct()
+    
+    protected $subscription;
+    
+    public function __construct($subscription)
     {
+        $this->subscription = $subscription;
     }
     public function via($notifiable)
     {
@@ -37,11 +41,11 @@ class SubscriptionNotification extends Notification implements ShouldQueue
         $template = \App\Models\General::where('correlative', 'subscription_email')->first();
         $body = $template
             ? \App\Helpers\Text::replaceData($template->description, [
-                'fecha_suscripcion' => date('d \d\e F \d\e\l Y'),
-                'email' => $notifiable->description ?? '',
+                'fecha_suscripcion' => now()->setTimezone('America/Lima')->locale('es')->translatedFormat('d \d\e F \d\e\l Y'),
+                'email' => $this->subscription->description ?? '',
                 'year' => date('Y'),
             ])
             : 'Plantilla no encontrada';
-        return (new RawHtmlMail($body, '¡Gracias por suscribirte!', $notifiable->description));
+        return (new RawHtmlMail($body, '¡Gracias por suscribirte!', $this->subscription->description));
     }
 }

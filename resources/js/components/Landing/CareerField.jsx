@@ -1,4 +1,5 @@
 import { Palette, Scissors, Briefcase, ShoppingBag, Eye, Sparkles, TrendingUp, Camera } from 'lucide-react';
+import { handleSmoothScroll } from '../../Utils/smoothScroll';
 
 const careers = [
   { icon: Palette, title: 'Diseñador de Modas', gradient: 'from-[#8B1538] to-[#B8174C]' },
@@ -84,12 +85,19 @@ const CareerField = () => {
                 En ANSIMAR te preparamos para trabajar en todas las áreas de la industria de la moda, desde el diseño hasta la gestión empresarial.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-                <button className="px-8 py-4 bg-white text-gray-900 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
+                <a
+                  href="#planDeEstudio" 
+                              onClick={handleSmoothScroll}
+                
+                className="px-8 py-4 bg-white text-gray-900 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
                   Ver plan de estudios
-                </button>
-                <button className="px-8 py-4 bg-[#D4AF37] text-gray-900 rounded-full font-bold hover:bg-[#B8860B] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
+                </a>
+                <a
+                 href="#postular" 
+                              onClick={handleSmoothScroll}
+                className="px-8 py-4 bg-[#D4AF37] text-gray-900 rounded-full font-bold hover:bg-[#B8860B] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
                   Postular ahora
-                </button>
+                </a>
               </div>
             </div>
           </div>

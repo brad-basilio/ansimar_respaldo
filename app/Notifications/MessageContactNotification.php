@@ -58,7 +58,7 @@ class MessageContactNotification extends Notification
                 'nombre_servicio' => $this->message->service_id ? $this->message->service->title : 'No especificado',
                 'year' => date('Y'),
                 'fecha_contacto' => $this->message->created_at
-                    ? $this->message->created_at->setTimezone('America/Lima')->translatedFormat('d \d\e F \d\e\l Y')
+                    ? $this->message->created_at->setTimezone('America/Lima')->locale('es')->translatedFormat('d \d\e F \d\e\l Y')
                     : '',
             ])
             : 'Plantilla no encontrada';

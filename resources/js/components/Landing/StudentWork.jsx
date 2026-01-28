@@ -1,4 +1,5 @@
 import { Sparkles } from 'lucide-react';
+import { handleSmoothScroll } from '../../Utils/smoothScroll';
 
 const studentWorks = [
   {
@@ -100,10 +101,13 @@ const StudentWork = () => {
 
         {/* See more button */}
         <div className="text-center mt-12">
-          <button className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-[#8B1538] to-[#B8174C] text-white rounded-full font-bold text-lg hover:from-[#6B0F28] hover:to-[#8B1538] transition-all duration-300 shadow-2xl hover:shadow-[#8B1538]/30 transform hover:scale-105">
+          <a
+            href="#postular" 
+            onClick={handleSmoothScroll}
+            className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-[#8B1538] to-[#B8174C] text-white rounded-full font-bold text-lg hover:from-[#6B0F28] hover:to-[#8B1538] transition-all duration-300 shadow-2xl hover:shadow-[#8B1538]/30 transform hover:scale-105">
             <Sparkles className="w-6 h-6" />
-            Ver más proyectos
-          </button>
+          Postular ahora
+          </a>
         </div>
       </div>
     </section>

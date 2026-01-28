@@ -1,4 +1,5 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { handleSmoothScroll } from '../../Utils/smoothScroll';
 
 const FromClassToRunway = () => {
   return (
@@ -57,13 +58,16 @@ const FromClassToRunway = () => {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-gray-900 rounded-full font-bold text-lg transition-all duration-300 shadow-2xl hover:shadow-[#D4AF37]/30 transform hover:scale-105">
+            <a href="#postular" onClick={handleSmoothScroll} className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-gray-900 rounded-full font-bold text-lg transition-all duration-300 shadow-2xl hover:shadow-[#D4AF37]/30 transform hover:scale-105">
               Comenzar mi camino
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-10 py-5 bg-white/10 backdrop-blur-sm text-white rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300 border border-white/30">
+            </a>
+            <a
+             href='#experiencias'
+             onClick={handleSmoothScroll}
+            className="px-10 py-5 bg-white/10 backdrop-blur-sm text-white rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300 border border-white/30">
               Conocer más
-            </button>
+            </a>
           </div>
         </div>
       </div>
