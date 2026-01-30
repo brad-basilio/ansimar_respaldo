@@ -7,6 +7,7 @@ const quickLinks = [
   { name: 'Postular Ahora', href: '#postular' },
   { name: 'Programas', href: '#carreras' },
   { name: 'Nosotros', href: '#nosotros' },
+  { name: 'Convenios', href: '#convenios' },
   { name: 'Galería', href: '#galeria' },
   { name: 'Testimonios', href: '#testimonios' },
 
@@ -122,13 +123,13 @@ const Footer = () => {
           {/* Column 1 - About */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-               <a href="/">
-            <img
-              src="/assets/img/logo-white.png"
-              alt="ANSIMAR Logo"
-              className="h-[80px] w-auto md:h-[100px] object-cover object-top"
-            />
-          </a>
+              <a href="/">
+                <img
+                  src="/assets/img/logo-white.png"
+                  alt="ANSIMAR Logo"
+                  className="h-[80px] w-auto md:h-[100px] object-cover object-top"
+                />
+              </a>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Más de 15 años formando a los mejores profesionales de la moda en el Perú. Tu sueño, nuestra pasión.
@@ -152,12 +153,12 @@ const Footer = () => {
 
           {/* Column 2 - Quick Links */}
           <div>
-          
+
           </div>
 
           {/* Column 3 - Programs */}
           <div>
-           <h5 className="text-white font-bold text-lg mb-6">Enlaces Rápidos</h5>
+            <h5 className="text-white font-bold text-lg mb-6">Enlaces Rápidos</h5>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -190,20 +191,20 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#D4AF37] flex-shrink-0" />
                 <a href="mailto:informes@ansimar.edu.pe" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
-                 informes@ansimar.edu.pe
+                  informes@ansimar.edu.pe
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-1" />
                 <span className="text-gray-400">
-                   <strong>Horario Presencial</strong><br />
+                  <strong>Horario Presencial</strong><br />
                   Lun - Vie: 9:00 AM - 1:30 PM<br />
-                   Lun - Vie: 6:00 PM - 10:00 PM<br />
-<br />
+                  Lun - Vie: 6:00 PM - 10:00 PM<br />
+                  <br />
 
-                     <span  className='mt-4'>  <strong>Horario Virtual</strong><br /> </span>
-                    Lun - Vie: 7:00 AM - 1:00 PM<br />
-         
+                  <span className='mt-4'>  <strong>Horario Virtual</strong><br /> </span>
+                  Lun - Vie: 7:00 AM - 1:00 PM<br />
+
                 </span>
               </li>
             </ul>

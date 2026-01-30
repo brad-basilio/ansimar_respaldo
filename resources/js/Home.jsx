@@ -11,6 +11,7 @@ import WhatMakesUsUnique from './Components/Landing/WhatMakesUsUnique';
 import PrestigeConnections from './Components/Landing/PrestigeConnections';
 import VanguardTraining from './Components/Landing/VanguardTraining';
 import InfrastructureInnovation from './Components/Landing/InfrastructureInnovation';
+import Conventions from './Components/Landing/Conventions';
 import InternationalConventions from './Components/Landing/InternationalConventions';
 import FacultyLeaders from './Components/Landing/FacultyLeaders';
 import CurriculumSection from './Components/Landing/CurriculumSection';
@@ -32,67 +33,70 @@ const Home = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section with Lead Form */}
       <Hero />
-      
+
       {/* Program Information */}
       <ProgramInfo />
-      
+
       {/* Why Study Fashion   <WhyStudyFashion />*/}
-     
-      
+
+
       {/* What Makes Us Unique - Horizontal Scroll      <WhatMakesUsUnique />*/}
-  
-      
+
+
       {/* Prestige Connections */}
       <PrestigeConnections />
-      
+
       {/* Vanguard Training */}
       <VanguardTraining />
-      
+
       {/* Infrastructure Innovation */}
       <InfrastructureInnovation />
-      
+
+      {/* Conventions Section */}
+      <Conventions />
+
       {/* International Conventions      <InternationalConventions />*/}
- 
-      
+
+
       {/* Faculty Leaders       <FacultyLeaders /> */}
 
-      
+
       {/* Curriculum Section */}
       <CurriculumSection />
-      
+
       {/* Career Field */}
       <CareerField />
-      
+
       {/* Strategic Impact Units        <StrategicImpactUnits />*/}
 
-      
+
       {/* Academic Continuity <AcademicContinuity /> */}
-      
-      
+
+
       {/* Student Work Gallery */}
       <StudentWork />
-      
+
       {/* From Class to Runway */}
       <FromClassToRunway />
-      
+
       {/* About Us    <AboutUs />*/}
-    
-      
+
+
       {/* Why Study With Us   <WhyStudyWithUs />*/}
-    
-      
+
+
       {/* Academic Structure        <AcademicStructure />*/}
 
-      
+
       {/* Video Gallery */}
       <VideoGallery />
-      
+
       {/* Testimonials */}
       <Testimonials />
-      
+
       {/* Final CTA */}
       <FinalCTA />
-      
+
       {/* Footer */}
       <Footer />
     </div>
