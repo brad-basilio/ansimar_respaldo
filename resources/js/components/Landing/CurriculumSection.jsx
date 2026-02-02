@@ -29,7 +29,10 @@ const CurriculumSection = () => {
 
             {/* CTA Button */}
             <div className="pt-6">
-              <button className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-gray-900 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-[#D4AF37]/30 transform hover:scale-105">
+              {/* /assets/ansimar/brochure.pdf */}
+              <button
+                onClick={() => window.open('/assets/ansimar/brochure.pdf', '_blank')}
+                className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-gray-900 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-[#D4AF37]/30 transform hover:scale-105">
                 <Download className="w-6 h-6 group-hover:animate-bounce" />
                 Descargar Brochure Académico
               </button>

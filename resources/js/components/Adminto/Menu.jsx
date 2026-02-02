@@ -5,6 +5,7 @@ import Logout from "../../Actions/Logout";
 import MenuItem from "../MenuItem";
 import MenuItemContainer from "../MenuItemContainer";
 import { useTranslation } from "../../hooks/useTranslation";
+import Global from "../../Utils/Global";
 
 const Menu = ({
     session,
@@ -37,9 +38,8 @@ const Menu = ({
             <div className="h-100" data-simplebar>
                 <div className="user-box text-center ">
                     <img
-                        src={`/api/admin/profile/thumbnail/${
-                            session.relative_id
-                        }?v=${new Date(session.updated_at).getTime()}`}
+                        src={`/api/admin/profile/thumbnail/${session.relative_id
+                            }?v=${new Date(session.updated_at).getTime()}`}
                         alt={session.name}
                         title={session.name}
                         className="rounded-circle img-thumbnail avatar-md"
@@ -136,8 +136,8 @@ const Menu = ({
                         <li className="menu-title" style={{ color: "#6c757d !important" }}>Navigation Panel</li>
                         {hasRole("Admin") && (
                             <>
-                              
-                              {/** 
+
+                                {/** 
                                *   <MenuItem
                                     href="/admin/home"
                                     icon="mdi mdi-home"
@@ -160,13 +160,13 @@ const Menu = ({
 
                                     {t("admin.sidebar.messages", "Mensajes")}
                                 </MenuItem>
-                                 <MenuItem
+                                <MenuItem
                                     href="/admin/subscriptions"
                                     icon="mdi mdi-email-multiple"
                                 >
                                     Subscripciones
                                 </MenuItem>
-                           {/*     <MenuItem
+                                {/*     <MenuItem
                                     href="/admin/appointments"
                                     icon="mdi mdi-android-messages"
                                 >
@@ -176,7 +176,7 @@ const Menu = ({
 
                                     {t("admin.sidebar.appointments", "Citas")}
                                 </MenuItem> */}
-                           {/*     <MenuItem
+                                {/*     <MenuItem
                                     href="/admin/complaints"
                                     icon="mdi mdi-book-open-page-variant"
                                 >
@@ -189,13 +189,13 @@ const Menu = ({
                                         "Reclamaciones"
                                     )}
                                 </MenuItem> */}
-                             {/*    <MenuItem
+                                {/*    <MenuItem
                                     href="/admin/services"
                                     icon="mdi mdi-shield-star"
                                 >
                                     {t("admin.sidebar.services", "Servicios")}
                                 </MenuItem>*/}
-                           {/*     <MenuItem
+                                {/*     <MenuItem
                                     href="/admin/specialities"
                                     icon="mdi mdi-tag-faces"
                                 >
@@ -270,9 +270,9 @@ const Menu = ({
                                         Cupones
                                     </MenuItem>
                                 </MenuItemContainer>*/}
-                                
-                               
-                              {/* <li className="menu-title">Landing Page</li>
+
+
+                                {/* <li className="menu-title">Landing Page</li>
                                 
                                 <MenuItem
                                     href="/admin/sliders"
@@ -295,8 +295,8 @@ const Menu = ({
                                         "Testimonios"
                                     )}
                                 </MenuItem>*/}
-                             
-                              {/*  <MenuItem
+
+                                {/*  <MenuItem
                                     href="/admin/translations"
                                     icon="mdi mdi-translate"
                                 >
@@ -332,7 +332,7 @@ const Menu = ({
                                 >
                                     Nosotros
                                 </MenuItem>*/}
-                              {/* 
+                                {/* 
                                 <MenuItem
                                     href="/admin/strengths"
                                     icon="mdi mdi-cards-heart"
@@ -347,8 +347,8 @@ const Menu = ({
                                 </MenuItem>
                                
                                 */}
-                               
-                               {/* <MenuItem
+
+                                {/* <MenuItem
                                     href="/admin/categories"
                                     icon="mdi mdi-clipboard-list-outline"
                                 >
@@ -363,15 +363,15 @@ const Menu = ({
                                 >
                                     {t("admin.sidebar.posts", "Posts")}
                                 </MenuItem> */}
-                                
-                           {/*     <MenuItem
+
+                                {/*     <MenuItem
                                     href="/admin/faqs"
                                     icon="mdi mdi-frequently-asked-questions"
                                 >
                                     FAQs
                                 </MenuItem> */}
-                              
-                              {/*  <MenuItem
+
+                                {/*  <MenuItem
                                     href="/admin/socials"
                                     icon="mdi mdi-web"
                                 >
@@ -387,16 +387,18 @@ const Menu = ({
                                 >
                                     {t("admin.sidebar.users", "Usuarios")}
                                 </MenuItem> */}
-                                <MenuItem
-                                    href="/admin/generals"
-                                    icon="mdi mdi-credit-card-settings"
-                                >
-                                    {t(
-                                        "admin.sidebar.generals",
-                                        "Datos Generales"
-                                    )}
-                                </MenuItem>
-                              {/*     <MenuItem
+                                {Global.APP_CORRELATIVE === "cambioDev" && (
+                                    <MenuItem
+                                        href="/admin/generals"
+                                        icon="mdi mdi-credit-card-settings"
+                                    >
+                                        {t(
+                                            "admin.sidebar.generals",
+                                            "Datos Generales"
+                                        )}
+                                    </MenuItem>
+                                )}
+                                {/*     <MenuItem
                                     href="/admin/profile"
                                     icon="mdi mdi-account-box"
                                 >

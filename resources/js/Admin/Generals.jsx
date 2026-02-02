@@ -111,7 +111,7 @@ const Generals = ({ generals }) => {
             generals.find((x) => x.correlative == "cintillo")?.description ?? "",
 
         copyright:
-            generals.find((x) => x.correlative == "copyright")?.description ?? 
+            generals.find((x) => x.correlative == "copyright")?.description ??
             "Cambia FX © 2019 - Marca registrada de Tu Cambio S.A.C. - RUC: 20603864957",
         emailCoorporativo:
             generals.find((x) => x.correlative == "email_coorporativo")
@@ -324,30 +324,34 @@ const Generals = ({ generals }) => {
         <div className="card">
             <form className="card-body" onSubmit={handleSubmit}>
                 <ul className="nav nav-tabs" id="contactTabs" role="tablist">
-                    <li className="nav-item" role="presentation">
-                        {" "}
-                        {/* Quitar el hidden para que se muestren las opciones */}
-                        <button
-                            className={`nav-link ${activeTab === "contact" ? "active" : ""
-                                }`}
-                            onClick={() => setActiveTab("contact")}
-                            type="button"
-                            role="tab"
-                        >
-                            Información de Contacto
-                        </button>
-                    </li>
-                    <li className="nav-item" role="presentation">
-                        <button
-                            className={`nav-link ${activeTab === "policies" ? "active" : ""
-                                }`}
-                            onClick={() => setActiveTab("policies")}
-                            type="button"
-                            role="tab"
-                        >
-                            Políticas y Términos
-                        </button>
-                    </li>
+                    {Global.APP_CORRELATIVE === "cambioDev" && (
+                        <>
+                            <li className="nav-item" role="presentation">
+                                {" "}
+                                {/* Quitar el hidden para que se muestren las opciones */}
+                                <button
+                                    className={`nav-link ${activeTab === "contact" ? "active" : ""
+                                        }`}
+                                    onClick={() => setActiveTab("contact")}
+                                    type="button"
+                                    role="tab"
+                                >
+                                    Información de Contacto
+                                </button>
+                            </li>
+                            <li className="nav-item" role="presentation">
+                                <button
+                                    className={`nav-link ${activeTab === "policies" ? "active" : ""
+                                        }`}
+                                    onClick={() => setActiveTab("policies")}
+                                    type="button"
+                                    role="tab"
+                                >
+                                    Políticas y Términos
+                                </button>
+                            </li>
+                        </>
+                    )}
                     <li className="nav-item" role="presentation">
                         <button
                             className={`nav-link ${activeTab === "seo" ? "active" : ""
@@ -576,7 +580,7 @@ const Generals = ({ generals }) => {
                                 required
                             />
                         </div>
-                         <div className="mb-3">
+                        <div className="mb-3">
                             <label
                                 htmlFor="whatsapp_phone"
                                 className="form-label"
@@ -621,7 +625,7 @@ const Generals = ({ generals }) => {
                                 Este mensaje se enviará automáticamente al iniciar una conversación.
                             </small>
                         </div>
-                       {/*
+                        {/*
                                <div className="mb-3">
                             <label
                                 htmlFor="copyright"
@@ -668,7 +672,7 @@ const Generals = ({ generals }) => {
                                 Este texto aparecerá en el footer del sitio web.
                             </small>
                         </div> */}
-                        
+
                         <div className="mb-3">
                             <label
                                 htmlFor="emailCoorporativo"
@@ -724,7 +728,7 @@ const Generals = ({ generals }) => {
                                 }
                             />
                         </div>
-                       {/* <div className="mb-3">
+                        {/* <div className="mb-3">
                             <QuillFormGroup
                                 label="Políticas de cambio"
                                 value={formData.exchangePolicy}
@@ -835,7 +839,7 @@ const Generals = ({ generals }) => {
                             <strong>Píxeles de Seguimiento</strong><br />
                             Configura aquí los códigos de seguimiento para diferentes plataformas. Solo ingresa el ID o código, el script completo se generará automáticamente.
                         </div>
-                        
+
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="mb-3">
@@ -1056,7 +1060,7 @@ const Generals = ({ generals }) => {
                     Guardar
                 </button>
             </form>
-        </div>
+        </div >
     );
 };
 
