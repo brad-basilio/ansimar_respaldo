@@ -5,55 +5,55 @@ import { handleSmoothScroll } from '../../Utils/smoothScroll';
 const videos = [
   {
     id: '1',
-    title: 'Desfile de Graduación 2024',
-    thumbnail: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800',
-    youtubeId: 'dQw4w9WgXcQ',
-    category: 'Desfiles',
-    duration: '15:30',
+    title: 'Domina el diseño, la confección y el patronaje real 👙🧥',
+    youtubeId: '0cKbHbfOp_U',
+    thumbnail: 'https://i.ytimg.com/vi/0cKbHbfOp_U/hq720.jpg',
+    category: 'Diseño',
+    type: 'short',
   },
   {
     id: '2',
-    title: 'Masterclass: Patronaje Avanzado',
-    thumbnail: 'https://images.pexels.com/photos/6764040/pexels-photo-6764040.jpeg?auto=compress&cs=tinysrgb&w=800',
-    youtubeId: 'dQw4w9WgXcQ',
+    title: '¿Por qué ANSIMAR es tu futuro en la moda? ¡Descúbrelo aquí! 🚀',
+    youtubeId: 'T1ZOr_NbMsg',
+    thumbnail: 'https://i.ytimg.com/vi/T1ZOr_NbMsg/hq720.jpg',
     category: 'Masterclass',
-    duration: '45:00',
+    type: 'short',
   },
   {
     id: '3',
-    title: 'Vida en el Campus ANSIMAR',
-    thumbnail: 'https://images.pexels.com/photos/3756168/pexels-photo-3756168.jpeg?auto=compress&cs=tinysrgb&w=800',
-    youtubeId: 'dQw4w9WgXcQ',
+    title: 'Un día en el instituto de modas: ¡Acompáñanos a ANSIMAR! ✨✂️',
+    youtubeId: 'q1ReW6Kv6ek',
+    thumbnail: 'https://i.ytimg.com/vi/q1ReW6Kv6ek/hq720.jpg',
     category: 'Campus',
-    duration: '8:45',
+    type: 'short',
   },
   {
     id: '4',
-    title: 'Entrevista con Egresada Exitosa',
-    thumbnail: 'https://images.pexels.com/photos/5709665/pexels-photo-5709665.jpeg?auto=compress&cs=tinysrgb&w=800',
-    youtubeId: 'dQw4w9WgXcQ',
-    category: 'Testimonios',
-    duration: '12:20',
+    title: '✨ ¡Vive la moda sin límites en Ansimar!',
+    youtubeId: 'EhkP9ljReCE',
+    thumbnail: 'https://i.ytimg.com/vi/EhkP9ljReCE/hq720.jpg',
+    category: 'Masterclass',
+    type: 'short',
   },
   {
     id: '5',
-    title: 'Proceso Creativo: De la Idea al Diseño',
-    thumbnail: 'https://images.pexels.com/photos/5705489/pexels-photo-5705489.jpeg?auto=compress&cs=tinysrgb&w=800',
-    youtubeId: 'dQw4w9WgXcQ',
+    title: '👗 El secreto de una prenda perfecta: Domina el Patronaje Industrial en Ansimar',
+    youtubeId: 'gzJwghd1Mic',
+    thumbnail: 'https://i.ytimg.com/vi/gzJwghd1Mic/hq720.jpg',
     category: 'Masterclass',
-    duration: '30:00',
+    type: 'short',
   },
   {
     id: '6',
-    title: 'Fashion Week ANSIMAR 2023',
-    thumbnail: 'https://images.pexels.com/photos/6046229/pexels-photo-6046229.jpeg?auto=compress&cs=tinysrgb&w=800',
-    youtubeId: 'dQw4w9WgXcQ',
-    category: 'Desfiles',
-    duration: '25:15',
+    title: '¿Qué hace diferente estudiar en Ansimar? 👗✨',
+    youtubeId: 'Km90t5fKXkE',
+    thumbnail: 'https://i.ytimg.com/vi/Km90t5fKXkE/hq720.jpg',
+    category: 'Testimonios',
+    type: 'short',
   },
 ];
 
-const categories = ['Todos', 'Desfiles', 'Masterclass', 'Campus', 'Testimonios'];
+const categories = ['Todos', 'Masterclass', 'Campus', 'Testimonios'];
 
 const VideoGallery = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -146,7 +146,7 @@ const VideoGallery = () => {
                   <img
                     src={video.thumbnail}
                     alt={video.title}
-                    className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full aspect-[9/16] object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
 
                   {/* Overlay */}
@@ -159,10 +159,7 @@ const VideoGallery = () => {
                     </div>
                   </div>
 
-                  {/* Duration badge */}
-                  <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full">
-                    <span className="text-white text-sm font-medium">{video.duration}</span>
-                  </div>
+
 
                   {/* Category badge */}
                   <div className="absolute top-4 left-4 bg-[#8B1538] px-3 py-1 rounded-full">
@@ -192,7 +189,7 @@ Postula Ahora          </a>
       {/* Video Modal */}
       {isModalOpen && selectedVideo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm">
-          <div className="relative w-full max-w-5xl">
+          <div className={`relative w-full ${selectedVideo.type === 'short' ? 'max-w-sm' : 'max-w-5xl'}`}>
             {/* Close button */}
             <button
               onClick={closeModal}
@@ -203,7 +200,7 @@ Postula Ahora          </a>
 
             {/* Video container */}
             <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl">
-              <div className="aspect-video">
+              <div className={selectedVideo.type === 'short' ? 'aspect-[9/16]' : 'aspect-video'}>
                 <iframe
                   src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1`}
                   title={selectedVideo.title}
@@ -217,7 +214,7 @@ Postula Ahora          </a>
             {/* Video title */}
             <div className="mt-4 text-center">
               <h3 className="text-2xl font-bold text-white">{selectedVideo.title}</h3>
-              <p className="text-gray-400 mt-2">{selectedVideo.category} • {selectedVideo.duration}</p>
+              <p className="text-gray-400 mt-2">{selectedVideo.category}</p>
             </div>
           </div>
         </div>
