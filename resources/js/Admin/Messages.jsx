@@ -291,7 +291,7 @@ const Messages = () => {
                         </div>
                     </div>
 
-                    <div className="col-md-6 mb-3">
+                    <div className="col-md-6 mb-3" hidden>
                         <div className="border rounded p-3 h-100">
                             <small className="text-muted d-block mb-1">
                                 <i className="fas fa-briefcase me-1"></i>{" "}
