@@ -52,6 +52,19 @@ const Messages = () => {
                 title="Mensajes"
                 rest={messagesRest}
                 toolBar={(container) => {
+                    const exportButton = container.find(
+                        (x) => x.name == "exportButton",
+                    );
+                    if (exportButton) {
+                        exportButton.options = {
+                            ...exportButton.options,
+                            text: "Exportar a Excel",
+                            hint: "Exportar a Excel",
+                            type: "default",
+                            stylingMode: "contained",
+                        };
+                        exportButton.showText = "always";
+                    }
                     container.unshift({
                         widget: "dxButton",
                         location: "after",
