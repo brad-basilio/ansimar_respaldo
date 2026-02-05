@@ -65,6 +65,8 @@ const Messages = () => {
                         },
                     });
                 }}
+                exportable={true}
+                exportableName="Mensajes"
                 columns={[
                     {
                         dataField: "id",
@@ -88,7 +90,7 @@ const Messages = () => {
                                     onClick={() => onModalOpen(data)}
                                 >
                                     {data.name}
-                                </span>
+                                </span>,
                             );
                         },
                     },
@@ -105,17 +107,22 @@ const Messages = () => {
                         caption: "Modalidad",
                         cellTemplate: (container, { data }) => {
                             if (data.modality) {
-                                const isVirtual = data.modality.toLowerCase() === 'virtual';
+                                const isVirtual =
+                                    data.modality.toLowerCase() === "virtual";
                                 ReactAppend(
                                     container,
-                                    <span className={`badge ${isVirtual ? 'bg-info' : 'bg-primary'} rounded-pill`}>
+                                    <span
+                                        className={`badge ${isVirtual ? "bg-info" : "bg-primary"} rounded-pill`}
+                                    >
                                         {data.modality}
-                                    </span>
+                                    </span>,
                                 );
                             } else {
                                 ReactAppend(
                                     container,
-                                    <i className="text-muted">- Sin especificar -</i>
+                                    <i className="text-muted">
+                                        - Sin especificar -
+                                    </i>,
                                 );
                             }
                         },
@@ -134,13 +141,16 @@ const Messages = () => {
                             ReactAppend(
                                 container,
                                 <span>
-                                    {data.service?.title || 
-                                        <i className="text-muted">- Consulta General -</i>
-                                    }
-                                </span>
+                                    {data.service?.title || (
+                                        <i className="text-muted">
+                                            - Consulta General -
+                                        </i>
+                                    )}
+                                </span>,
                             );
                         },
                     },
+
                     {
                         dataField: "created_at",
                         caption: "Fecha",
@@ -152,20 +162,21 @@ const Messages = () => {
                         dataField: "status",
                         caption: "Estado",
                         dataType: "boolean",
+                        allowExporting: false,
                         cellTemplate: (container, { data }) => {
                             if (data.seen) {
                                 ReactAppend(
                                     container,
                                     <span className="badge bg-success rounded-pill">
                                         Leído
-                                    </span>
+                                    </span>,
                                 );
                             } else {
                                 ReactAppend(
                                     container,
                                     <span className="badge bg-danger rounded-pill">
                                         No leído
-                                    </span>
+                                    </span>,
                                 );
                             }
                         },
@@ -179,7 +190,7 @@ const Messages = () => {
                                     title: "Ver mensaje",
                                     icon: "fa fa-eye",
                                     onClick: () => onModalOpen(data),
-                                })
+                                }),
                             );
                             // container.append(DxButton({
                             //   className: 'btn btn-xs btn-light',
@@ -193,7 +204,7 @@ const Messages = () => {
                                     title: "Eliminar",
                                     icon: "fa fa-trash",
                                     onClick: () => onDeleteClicked(data.id),
-                                })
+                                }),
                             );
                         },
                         allowFiltering: false,
@@ -201,7 +212,12 @@ const Messages = () => {
                     },
                 ]}
             />
-            <Modal modalRef={modalRef} title="Detalle del Mensaje" hideFooter size="md">
+            <Modal
+                modalRef={modalRef}
+                title="Detalle del Mensaje"
+                hideFooter
+                size="md"
+            >
                 <div className="row">
                     <div className="col-12 mb-3">
                         <div className="card bg-light border-0">
@@ -211,9 +227,13 @@ const Messages = () => {
                                         <i className="fas fa-user fa-lg"></i>
                                     </div>
                                     <div>
-                                        <h5 className="mb-0">{dataLoaded?.name}</h5>
+                                        <h5 className="mb-0">
+                                            {dataLoaded?.name}
+                                        </h5>
                                         <small className="text-muted">
-                                            {dataLoaded?.email || <i>Sin correo</i>}
+                                            {dataLoaded?.email || (
+                                                <i>Sin correo</i>
+                                            )}
                                         </small>
                                     </div>
                                 </div>
@@ -227,7 +247,11 @@ const Messages = () => {
                                 <i className="fas fa-phone me-1"></i> Teléfono
                             </small>
                             <span className="fw-semibold">
-                                {dataLoaded?.phone || <i className="text-muted">No especificado</i>}
+                                {dataLoaded?.phone || (
+                                    <i className="text-muted">
+                                        No especificado
+                                    </i>
+                                )}
                             </span>
                         </div>
                     </div>
@@ -235,10 +259,17 @@ const Messages = () => {
                     <div className="col-md-6 mb-3">
                         <div className="border rounded p-3 h-100">
                             <small className="text-muted d-block mb-1">
-                                <i className="fas fa-birthday-cake me-1"></i> Edad
+                                <i className="fas fa-birthday-cake me-1"></i>{" "}
+                                Edad
                             </small>
                             <span className="fw-semibold">
-                                {dataLoaded?.age ? `${dataLoaded.age} años` : <i className="text-muted">No especificado</i>}
+                                {dataLoaded?.age ? (
+                                    `${dataLoaded.age} años`
+                                ) : (
+                                    <i className="text-muted">
+                                        No especificado
+                                    </i>
+                                )}
                             </span>
                         </div>
                     </div>
@@ -249,7 +280,9 @@ const Messages = () => {
                                 <i className="fas fa-laptop me-1"></i> Modalidad
                             </small>
                             {dataLoaded?.modality ? (
-                                <span className={`badge ${dataLoaded.modality.toLowerCase() === 'virtual' ? 'bg-info' : 'bg-primary'}`}>
+                                <span
+                                    className={`badge ${dataLoaded.modality.toLowerCase() === "virtual" ? "bg-info" : "bg-primary"}`}
+                                >
                                     {dataLoaded.modality}
                                 </span>
                             ) : (
@@ -261,10 +294,15 @@ const Messages = () => {
                     <div className="col-md-6 mb-3">
                         <div className="border rounded p-3 h-100">
                             <small className="text-muted d-block mb-1">
-                                <i className="fas fa-briefcase me-1"></i> Servicio
+                                <i className="fas fa-briefcase me-1"></i>{" "}
+                                Servicio
                             </small>
                             <span className="fw-semibold">
-                                {dataLoaded?.service?.title || <i className="text-muted">Consulta General</i>}
+                                {dataLoaded?.service?.title || (
+                                    <i className="text-muted">
+                                        Consulta General
+                                    </i>
+                                )}
                             </span>
                         </div>
                     </div>
@@ -275,7 +313,9 @@ const Messages = () => {
                                 <small className="text-muted d-block mb-1">
                                     <i className="fas fa-tag me-1"></i> Asunto
                                 </small>
-                                <span className="fw-semibold">{dataLoaded?.subject}</span>
+                                <span className="fw-semibold">
+                                    {dataLoaded?.subject}
+                                </span>
                             </div>
                         </div>
                     )}
@@ -284,9 +324,12 @@ const Messages = () => {
                         <div className="col-12 mb-3">
                             <div className="border rounded p-3">
                                 <small className="text-muted d-block mb-1">
-                                    <i className="fas fa-comment me-1"></i> Mensaje
+                                    <i className="fas fa-comment me-1"></i>{" "}
+                                    Mensaje
                                 </small>
-                                <p className="mb-0 mt-2">{dataLoaded?.description}</p>
+                                <p className="mb-0 mt-2">
+                                    {dataLoaded?.description}
+                                </p>
                             </div>
                         </div>
                     )}
@@ -296,16 +339,21 @@ const Messages = () => {
                         <div className="d-flex justify-content-between align-items-center">
                             <small className="text-muted">
                                 <i className="fas fa-calendar me-1"></i>
-                                {dataLoaded?.created_at ? new Date(dataLoaded.created_at).toLocaleString('es-PE') : ''}
+                                {dataLoaded?.created_at
+                                    ? new Date(
+                                          dataLoaded.created_at,
+                                      ).toLocaleString("es-PE")
+                                    : ""}
                             </small>
                             {dataLoaded?.phone && (
-                                <a 
-                                    href={`https://wa.me/51${dataLoaded.phone.replace(/\D/g, '')}`} 
-                                    target="_blank" 
+                                <a
+                                    href={`https://wa.me/51${dataLoaded.phone.replace(/\D/g, "")}`}
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className="btn btn-success btn-sm"
                                 >
-                                    <i className="fab fa-whatsapp me-1"></i> Contactar por WhatsApp
+                                    <i className="fab fa-whatsapp me-1"></i>{" "}
+                                    Contactar por WhatsApp
                                 </a>
                             )}
                         </div>
@@ -320,6 +368,6 @@ CreateReactScript((el, properties) => {
     createRoot(el).render(
         <BaseAdminto {...properties} title="Mensajes">
             <Messages {...properties} />
-        </BaseAdminto>
+        </BaseAdminto>,
     );
 });
