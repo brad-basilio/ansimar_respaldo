@@ -1,114 +1,109 @@
-import { createRoot } from 'react-dom/client';
-import Base from './Components/Tailwind/Base';
-import CreateReactScript from './Utils/CreateReactScript';
-import { CarritoProvider } from './context/CarritoContext.jsx';
+import { createRoot } from "react-dom/client";
+import Base from "./Components/Tailwind/Base";
+import CreateReactScript from "./Utils/CreateReactScript";
+import { CarritoProvider } from "./context/CarritoContext.jsx";
 
 // Landing Components
-import Hero from './Components/Landing/Hero';
-import ProgramInfo from './Components/Landing/ProgramInfo';
-import WhyStudyFashion from './Components/Landing/WhyStudyFashion';
-import WhatMakesUsUnique from './Components/Landing/WhatMakesUsUnique';
-import PrestigeConnections from './Components/Landing/PrestigeConnections';
-import VanguardTraining from './Components/Landing/VanguardTraining';
-import InfrastructureInnovation from './Components/Landing/InfrastructureInnovation';
-import Conventions from './Components/Landing/Conventions';
-import InternationalConventions from './Components/Landing/InternationalConventions';
-import FacultyLeaders from './Components/Landing/FacultyLeaders';
-import CurriculumSection from './Components/Landing/CurriculumSection';
-import CareerField from './Components/Landing/CareerField';
-import StrategicImpactUnits from './Components/Landing/StrategicImpactUnits';
-import AcademicContinuity from './Components/Landing/AcademicContinuity';
-import StudentWork from './Components/Landing/StudentWork';
-import FromClassToRunway from './Components/Landing/FromClassToRunway';
-import AboutUs from './Components/Landing/AboutUs';
-import WhyStudyWithUs from './Components/Landing/WhyStudyWithUs';
-import AcademicStructure from './Components/Landing/AcademicStructure';
-import VideoGallery from './Components/Landing/VideoGallery';
-import Testimonials from './Components/Landing/Testimonials';
-import FinalCTA from './Components/Landing/FinalCTA';
-import Footer from './Components/Landing/Footer';
+import Hero from "./Components/Landing/Hero";
+import ProgramInfo from "./Components/Landing/ProgramInfo";
+import WhyStudyFashion from "./Components/Landing/WhyStudyFashion";
+import WhatMakesUsUnique from "./Components/Landing/WhatMakesUsUnique";
+import PrestigeConnections from "./Components/Landing/PrestigeConnections";
+import VanguardTraining from "./Components/Landing/VanguardTraining";
+import InfrastructureInnovation from "./Components/Landing/InfrastructureInnovation";
+import Conventions from "./Components/Landing/Conventions";
+import InternationalConventions from "./Components/Landing/InternationalConventions";
+import FacultyLeaders from "./Components/Landing/FacultyLeaders";
+import CurriculumSection from "./Components/Landing/CurriculumSection";
+import CareerField from "./Components/Landing/CareerField";
+import StrategicImpactUnits from "./Components/Landing/StrategicImpactUnits";
+import AcademicContinuity from "./Components/Landing/AcademicContinuity";
+import StudentWork from "./Components/Landing/StudentWork";
+import FromClassToRunway from "./Components/Landing/FromClassToRunway";
+import AboutUs from "./Components/Landing/AboutUs";
+import WhyStudyWithUs from "./Components/Landing/WhyStudyWithUs";
+import AcademicStructure from "./Components/Landing/AcademicStructure";
+import VideoGallery from "./Components/Landing/VideoGallery";
+import Testimonials from "./Components/Landing/Testimonials";
+import FinalCTA from "./Components/Landing/FinalCTA";
+import Footer from "./Components/Landing/Footer";
+import FloatingWhatsApp from "./Components/Landing/FloatingWhatsApp";
 
 const Home = () => {
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section with Lead Form */}
-      <Hero />
+    return (
+        <div className="min-h-screen bg-white">
+            {/* Hero Section with Lead Form */}
+            <Hero />
 
-      {/* Program Information */}
-      <ProgramInfo />
+            {/* Program Information */}
+            <ProgramInfo />
 
-      {/* Why Study Fashion   <WhyStudyFashion />*/}
+            {/* Why Study Fashion   <WhyStudyFashion />*/}
 
+            {/* What Makes Us Unique - Horizontal Scroll      <WhatMakesUsUnique />*/}
 
-      {/* What Makes Us Unique - Horizontal Scroll      <WhatMakesUsUnique />*/}
+            {/* Prestige Connections */}
+            <PrestigeConnections />
 
+            {/* Vanguard Training */}
+            <VanguardTraining />
 
-      {/* Prestige Connections */}
-      <PrestigeConnections />
+            {/* Infrastructure Innovation */}
+            <InfrastructureInnovation />
 
-      {/* Vanguard Training */}
-      <VanguardTraining />
+            {/* Conventions Section */}
+            <Conventions />
 
-      {/* Infrastructure Innovation */}
-      <InfrastructureInnovation />
+            {/* International Conventions      <InternationalConventions />*/}
 
-      {/* Conventions Section */}
-      <Conventions />
+            {/* Faculty Leaders       <FacultyLeaders /> */}
 
-      {/* International Conventions      <InternationalConventions />*/}
+            {/* Curriculum Section */}
+            <CurriculumSection />
 
+            {/* Career Field */}
+            <CareerField />
 
-      {/* Faculty Leaders       <FacultyLeaders /> */}
+            {/* Strategic Impact Units        <StrategicImpactUnits />*/}
 
+            {/* Academic Continuity <AcademicContinuity /> */}
 
-      {/* Curriculum Section */}
-      <CurriculumSection />
+            {/* Student Work Gallery */}
+            <StudentWork />
 
-      {/* Career Field */}
-      <CareerField />
+            {/* From Class to Runway */}
+            <FromClassToRunway />
 
-      {/* Strategic Impact Units        <StrategicImpactUnits />*/}
+            {/* About Us    <AboutUs />*/}
 
+            {/* Why Study With Us   <WhyStudyWithUs />*/}
 
-      {/* Academic Continuity <AcademicContinuity /> */}
+            {/* Academic Structure        <AcademicStructure />*/}
 
+            {/* Video Gallery */}
+            <VideoGallery />
 
-      {/* Student Work Gallery */}
-      <StudentWork />
+            {/* Testimonials */}
+            <Testimonials />
 
-      {/* From Class to Runway */}
-      <FromClassToRunway />
+            {/* Final CTA */}
+            <FinalCTA />
 
-      {/* About Us    <AboutUs />*/}
+            {/* Footer */}
+            <Footer />
 
-
-      {/* Why Study With Us   <WhyStudyWithUs />*/}
-
-
-      {/* Academic Structure        <AcademicStructure />*/}
-
-
-      {/* Video Gallery */}
-      <VideoGallery />
-
-      {/* Testimonials */}
-      <Testimonials />
-
-      {/* Final CTA */}
-      <FinalCTA />
-
-      {/* Footer */}
-      <Footer />
-    </div>
-  );
+            {/* Floating WhatsApp Button */}
+            <FloatingWhatsApp />
+        </div>
+    );
 };
 
 CreateReactScript((el, properties) => {
-  createRoot(el).render(
-    <CarritoProvider>
-      <Base {...properties}>
-        <Home {...properties} />
-      </Base>
-    </CarritoProvider>
-  );
+    createRoot(el).render(
+        <CarritoProvider>
+            <Base {...properties}>
+                <Home {...properties} />
+            </Base>
+        </CarritoProvider>,
+    );
 });
